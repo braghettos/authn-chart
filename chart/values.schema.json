@@ -343,6 +343,11 @@
       "title": "JWT sign key secret name",
       "description": "Name of the Secret holding the JWT signing key (created by the installer umbrella before authn).",
       "default": "jwt-sign-key"
+    },
+    "global": {
+      "type": "object",
+      "title": "Global values",
+      "description": "Helm global values (injected when this chart is used as a subchart)."
     }
   }
 }
