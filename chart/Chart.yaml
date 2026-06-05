@@ -23,8 +23,3 @@ version: CHART_VERSION
 # It is recommended to use it with quotes.
 # Pinned to the authn app version shipped with chart 0.22.2 (installer 2.7.0).
 appVersion: "0.22.2"
-
-dependencies:
-  - name: authn-crd
-    version: CHART_VERSION
-    repository: file://../crd-chart
