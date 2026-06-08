@@ -1,7 +1,10 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  name: {{ include "authn.fullname" . }}
+  # suffixed with the namespace (like the ClusterRoles) to avoid colliding with the
+  # release-named Role that Krateo's composition-dynamic-controller pre-creates when
+  # this chart is installed as a Composition.
+  name: {{ include "authn.fullname" . }}-{{ .Release.Namespace }}
   labels:
     {{- include "authn.labels" . | nindent 4 }}
 rules:
