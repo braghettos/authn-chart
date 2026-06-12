@@ -15,10 +15,17 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: CHART_VERSION
-
+# Pinned (NOT the CHART_VERSION tag): the authn CRDs (users/ldap/oauth/oidc)
+# version independently of the authn app chart. The installer pins authn-crd 0.22.2.
+version: 0.22.2
+appVersion: "0.22.2"
 home: https://krateo.io
-icon: "https://github.com/krateoplatformops/krateo/blob/main/docs/media/logo.svg"
-
+icon: https://github.com/krateoplatformops/krateo/blob/main/docs/media/logo.svg
+keywords:
+  - krateo
+  - platformops
+  - authn
+  - crd
+# sources -> the braghettos fork of the authn codebase (the CRDs come from that code).
 sources:
-  - https://github.com/krateoplatformops/authn-chart
+  - https://github.com/braghettos/authn

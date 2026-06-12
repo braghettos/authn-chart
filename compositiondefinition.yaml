@@ -8,5 +8,5 @@ metadata:
   namespace: krateo-system
 spec:
   chart:
-    url: oci://ghcr.io/braghettos/charts/authn
+    url: oci://ghcr.io/braghettos/krateo/authn
     version: "0.22.2"
