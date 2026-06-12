@@ -9,10 +9,14 @@ Part of the [krateo-installer](https://github.com/braghettos/krateo-installer) e
 
 ## What it ships
 
-| Path | Chart | OCI artifact |
-|------|-------|--------------|
-| `chart/` | `authn` (appVersion 0.22.2) | `oci://ghcr.io/braghettos/krateo/authn` |
-| `crd-chart/` | `authn-crd` | `oci://ghcr.io/braghettos/krateo/authn-crd` |
+| Path | Chart | OCI artifact | Versioning |
+|------|-------|--------------|-----------|
+| `chart/` | `authn` (appVersion 0.22.2) | `oci://ghcr.io/braghettos/krateo/authn` | tracks the git tag |
+| `crd-chart/` | `authn-crd` | `oci://ghcr.io/braghettos/krateo/authn-crd` | pinned `0.22.2` (independent of the app tag) |
+
+The authn CRDs (users/ldap/oauth/oidc) version independently of the authn app, so
+`crd-chart/Chart.yaml` carries a literal `version: 0.22.2` rather than the `CHART_VERSION`
+placeholder — the release workflow leaves it untouched.
 
 ## How the installer consumes it
 
