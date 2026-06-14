@@ -1,5 +1,5 @@
 apiVersion: v2
-name: authn-crd
+name: krateo-authn-crd
 description: Krateo PlatformOps AuthN Service CRDs
 
 # A chart can be either an 'application' or a 'library' chart.
